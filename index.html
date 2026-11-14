@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% if site.posts.size == 0 %}
+<p class="empty">The first post is on its way.</p>
+{% else %}
+<ul class="post-list">
+{% for post in site.posts %}
+  <li><span class="post-meta">{{ post.date | date: '%b %-d, %Y' }}</span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.summary %}<p>{{ post.summary }}</p>{% endif %}</li>
+{% endfor %}
+</ul>
+{% endif %}

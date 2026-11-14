@@ -1,0 +1,20 @@
+title: Consistently Incoherent
+description: Notes on memory consistency, coherence, and heterogeneous systems
+author: Vijay Nagarajan
+url: "https://vijay-nagarajan.github.io"
+baseurl: "/blog"
+permalink: /:year/:month/:title/
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  input: GFM
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - README.md
+giscus:
+  repo: vijay-nagarajan/blog
+  repo_id: ""
+  category: Announcements
+  category_id: ""

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>{% include head.html %}</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  <p class="site-subtitle">{{ site.description }}</p>
+  <nav><a href="{{ '/' | relative_url }}">Posts</a> <a href="{{ '/about/' | relative_url }}">About</a> <a href="{{ '/feed.xml' | relative_url }}">RSS</a></nav>
+</header>
+<main>{{ content }}</main>
+<footer class="site-footer">&copy; {{ 'now' | date: '%Y' }} {{ site.author }}</footer>
+</body>
+</html>

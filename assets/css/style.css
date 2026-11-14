@@ -1,0 +1,72 @@
+:root {
+  --bg: #fdfdfb;
+  --fg: #1d1d1f;
+  --muted: #6b6b70;
+  --rule: #e2e2dc;
+  --link: #0b5c99;
+  --code-bg: #f3f3ee;
+  --arm: #0072b2;
+  --tso: #d55e00;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #18181a;
+    --fg: #e6e6e3;
+    --muted: #9a9a9f;
+    --rule: #333336;
+    --link: #6fb3e8;
+    --code-bg: #232326;
+    --arm: #56b4e9;
+    --tso: #f0a35e;
+  }
+}
+
+* { box-sizing: border-box; }
+html { font-size: 18px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  line-height: 1.6;
+}
+header, main, footer {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header { padding-top: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+.site-title { font-size: 1.6rem; font-weight: 700; color: var(--fg); text-decoration: none; }
+.site-subtitle { margin: 0.2rem 0 0.8rem; color: var(--muted); font-style: italic; }
+.site-header nav a { margin-right: 1rem; font-size: 0.9rem; }
+.site-footer { margin-top: 4rem; padding-top: 1rem; padding-bottom: 2rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.85rem; }
+
+a { color: var(--link); }
+h1, h2, h3 { line-height: 1.25; }
+.post-title { margin-top: 2rem; margin-bottom: 0.2rem; font-size: 1.8rem; }
+.post-meta { color: var(--muted); font-size: 0.85rem; margin-top: 0; }
+.post-list { list-style: none; padding: 0; }
+.post-list li { margin: 1.5rem 0; }
+.post-list li a { font-size: 1.2rem; display: block; }
+.post-list li p { margin: 0.3rem 0 0; }
+.empty { margin-top: 2rem; color: var(--muted); }
+
+code, pre { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 0.85em; background: var(--code-bg); }
+code { padding: 0.1em 0.3em; border-radius: 3px; }
+pre { padding: 0.8rem 1rem; overflow-x: auto; border-radius: 4px; }
+pre code { padding: 0; background: none; }
+
+/* tables, including litmus tests written as tables */
+table { border-collapse: collapse; margin: 1.2rem auto; font-size: 0.9rem; }
+th, td { padding: 0.3rem 0.8rem; text-align: left; border-bottom: 1px solid var(--rule); }
+th { border-bottom: 2px solid var(--fg); }
+
+figure { margin: 1.8rem 0; text-align: center; }
+figure img { max-width: 100%; height: auto; }
+figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 0.5rem; text-align: left; }
+
+blockquote { margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--rule); color: var(--muted); }
+.arm { color: var(--arm); }
+.tso { color: var(--tso); }
+.comments { margin-top: 3rem; }
