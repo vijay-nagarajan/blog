@@ -70,3 +70,10 @@ blockquote { margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--ru
 .arm { color: var(--arm); }
 .tso { color: var(--tso); }
 .comments { margin-top: 3rem; }
+
+/* two litmus tests side by side: tighter cells, and the pair may extend past the text column on wide screens; wraps on phones */
+.litmus-pair { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 1.5rem;
+  width: min(52rem, calc(100vw - 2rem)); position: relative; left: 50%; transform: translateX(-50%); margin: 1.2rem 0 0; }
+.litmus-pair table { margin: 0.3rem 0; font-size: 0.8rem; }
+.litmus-pair th, .litmus-pair td { padding: 0.25rem 0.5rem; white-space: nowrap; }
+.panel-label { margin: 0.2rem 0 0; font-size: 0.85rem; color: var(--muted); text-align: center; }
