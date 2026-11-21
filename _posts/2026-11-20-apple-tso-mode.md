@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What does Apple's TSO mode implement?"
-summary: "Apple's chips can run any thread under a TSO model. What model does it actually enforce given that it also runs all Arm instructions? How do TSO threads mix with Arm threads? And something about Arm's atomics along the way."
+summary: "Apple's chips can run any thread under a TSO model. What model does it actually enforce given that the thread actually runs Arm instructions? How does a TSO thread interact with an Arm thread? And something about Arm's atomics along the way."
 ---
 
 Apple's M-series chips have a TSO mode, which Rosetta turns on for the threads that run translated x86 code. Asahi Linux exposes the mode to user programs, and the x86 emulator [FEX-Emu](https://fex-emu.com/FEX-2306/) uses it. A proposal to add this interface to mainline Linux was [declined](https://lkml.iu.edu/2404.2/05657.html), in part because [no specification says](https://lists.infradead.org/pipermail/linux-arm-kernel/2024-May/926618.html) which memory model the mode implements.
